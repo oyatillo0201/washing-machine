@@ -180,4 +180,9 @@ img {
   text-transform: uppercase;
   background-color: #131313;
   color: #fff;
+  transition: trasnform 3s ease;
+}
+
+.button-start:hover {
+  transform: translateY(-7px);
 }
