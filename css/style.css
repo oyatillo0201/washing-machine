@@ -20,7 +20,7 @@ body {
   font-family: "Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #fff;
+  background-color: #de8a89;
   color: #222;
 }
 
@@ -33,8 +33,8 @@ img {
 .container {
   width: 100%;
   max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -43,4 +43,141 @@ img {
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+/* MAIN-CONTENT */
+.global-wrapper {
+
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 45px;
+}
+
+.hero-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 168px;
+}
+
+.hero-item {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 55px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ecb9b8;
+}
+
+.hero-item:hover {
+  color: #fff;
+}
+
+.hero-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.hero-text {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #fff;;
+  margin-left: -100px;
+  max-width: 794px;
+  width: 100%;
+}
+
+
+/* PROMO */
+.promo {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button {
+  width: 105px;
+  height: 103px;
+  border: 0;
+  background-color: #ecb9b8;
+}
+
+.button:hover {
+  opacity: 0.6;
+}
+
+.button-left {
+  background-image: url(../img/angle-left-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 25px;
+}
+
+.button-right {
+  background-image: url(../img/angle-right-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px 25px;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  color: #fff;
+}
+
+.box-timer {
+  background-color: #3e3c3d;
+}
+
+.box-timer-heading {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #ce8f8b;
+}
+
+.time {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+.box-temperature {
+  background-color: #353334;
+}
+
+.box-load {
+  background-color: #201e1f;
+}
+
+.button-starts {
+  display: flex;
+}
+
+.button-start {
+  position: relative;
+  bottom: 30px;
+  width: 100%;
+  max-width: 260px;
+  height: 60px;
+  border: 0;
+  margin-left: 255px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: #131313;
+  color: #fff;
 }
