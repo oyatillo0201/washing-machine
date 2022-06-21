@@ -6,47 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Washing-machine</title>
 
+  <!-- GOOLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <h1 class="visually-hidden">Washing machine interface</h1>
   <!-- MAIN-CONTENT -->
   <main class="main-content">
-    <div class="containero">
-      <div class="global-wrapper">
-        <div class="hero">
-          <ul class="hero-list">
-            <li class="hero-item">Synthetic</li>
-            <li class="hero-item">Wool</li>
-            <li class="hero-item">Denim</li>
-            <li class="hero-item">Silk</li>
-            <li class="hero-item">Line</li>
-          </ul>
-            <p class="hero-text">Loads should be under 8 pounds. It is recommended using neutral  detergent  to prevent <br> damage to the cloth and to to improve the washing  results.</p>
-        </div>
+    <div class="container">
+      <ul class="washing-mode-list">
+        <li class="washing-mode-item washing-mode-item-active">
+          <a class="washing-mode-link" href="#">Synthetic</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-link" href="#">Wool</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-link" href="#">Denim</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-link" href="#">Silk</a>
+        </li>
+        <li class="washing-mode-item">
+          <a class="washing-mode-link" href="#">Linen</a>
+        </li>
+      </ul>
+      <p class="washing-mode-notice">Loads should be under 8 pounds. It is recommended using neutral  detergent  to prevent damage to the cloth and to to improve the washing  results.</p>
 
-        <div class="promo">
-          <button class="button button-left" type="button"></button>
-          <div class="box box-timer">
-            <div class="box-timer-heading">Timer</div>
-            <div class="time">45 min</div>
+
+      <div class="washing-mode-info">
+        <button class="washing-mode-controller washing-mode-controller-prev" type="button">
+          <img class="washing-mode-controller-img" src="/img/angle-left-solid.svg" alt="Previous" width="10" height="10">
+        </button>
+        <button class="washing-mode-controller washing-mode-controller-next" type="button">
+          <img class="washing-mode-controller-img" src="/img/angle-right-solid.svg" alt="Next" width="10" height="10"" >
+        </button>
+
+        <button class="start-button" type="button">Start</button>
+
+        <dl class="washing-mode-status">
+          <div class="washing-mode-status-item washing-mode-status-item-timer">
+            <dt class="washing-mode-status-heading">Timer</dt>
+            <dd class="washing-mode-status-value">45 min</dd>
           </div>
-
-          <div class="box box-temperature">
-            <div class="box-timer-heading">Temperature</div>
-            <div class="time">Cold</div>
+          <div class="washing-mode-status-item washing-mode-status-item-temperature">
+            <dt class="washing-mode-status-heading">Temperature</dt>
+            <dd class="washing-mode-status-value">Cold</dd>
           </div>
-
-          <div class="box box-load">
-            <div class="box-timer-heading">Load</div>
-            <div class="time">Medium</div>
+          <div class="washing-mode-status-item washing-mode-status-item-load">
+            <dt class="washing-mode-status-heading">Load</dt>
+            <dd class="washing-mode-status-value">Medium</dd>
           </div>
-          <button class="button button-right" type="button"></button>
-
-        </div>
-        <div class="button-starts"><button class="button-start">Start</button></div>
+        </dl>
       </div>
     </div>
   </main>

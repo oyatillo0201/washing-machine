@@ -17,11 +17,12 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto","Arial", sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #de8a89;
-  color: #222;
+  background-color: #ff907c;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 img {
@@ -32,157 +33,152 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+  max-width: 640px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-/* MAIN-CONTENT */
-.global-wrapper {
-
+.washing-mode-info {
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.hero {
+.washing-mode-list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 45px;
-}
-
-.hero-list {
-  display: flex;
-  justify-content: center;
-  margin: 0;
   padding: 0;
-  margin-left: 168px;
-}
-
-.hero-item {
-  display: flex;
-  justify-content: center;
+  margin: 0;
+  margin-bottom: 10px;
   list-style: none;
-  font-size: 55px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #ecb9b8;
 }
 
-.hero-item:hover {
-  color: #fff;
-}
-
-.hero-item:not(:last-child) {
+.washing-mode-item:not(:last-child) {
   margin-right: 40px;
 }
 
-.hero-text {
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-  color: #fff;;
-  margin-left: -100px;
-  max-width: 794px;
-  width: 100%;
-}
-
-
-/* PROMO */
-.promo {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.button {
-  width: 105px;
-  height: 103px;
-  border: 0;
-  background-color: #ecb9b8;
-}
-
-.button:hover {
+.washing-mode-link {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
   opacity: 0.6;
 }
 
-.button-left {
-  background-image: url(../img/angle-left-solid.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25px 25px;
+.washing-mode-link:hover {
+  opacity: 0.9;
 }
 
-.button-right {
-  background-image: url(../img/angle-right-solid.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25px 25px;
+.washing-mode-item-active .washing-mode-link {
+  opacity: 1;
 }
 
-.box {
-  position: relative;
+.washing-mode-notice {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+.washing-mode-controller {
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background-color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.washing-mode-controller:hover {
+  opacity: 1;
+}
+
+.washing-mode-controller-prev {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.washing-mode-controller-next {
+  right: 0;
+  transform: translateX(100%);
+}
+
+
+.washing-mode-status {
+  display: flex;
+  margin: 0;
+}
+
+.washing-mode-status-item {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  color: #fff;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
 }
 
-.box-timer {
-  background-color: #3e3c3d;
+.washing-mode-status-item-timer{
+  background-color: #3e3c3d;;
 }
 
-.box-timer-heading {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  color: #ce8f8b;
-}
-
-.time {
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
-}
-
-.box-temperature {
+.washing-mode-status-item-temperature {
   background-color: #353334;
 }
 
-.box-load {
+.washing-mode-status-item-load {
   background-color: #201e1f;
 }
 
-.button-starts {
-  display: flex;
+.washing-mode-status-heading {
+  color: #ce8f8b;
 }
 
-.button-start {
-  position: relative;
-  bottom: 30px;
-  width: 100%;
-  max-width: 260px;
-  height: 60px;
+.washing-mode-status-value {
+  margin-left: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.start-button {
+  position: absolute;
+  left: 10px;
+  bottom: -25px;
+
+  width: 180px;
+  padding: 20px;
   border: 0;
-  margin-left: 255px;
   border-radius: 5px;
-  text-transform: uppercase;
-  background-color: #131313;
+  background-color: #111;
   color: #fff;
-  transition: trasnform 3s ease;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: trasnform 0.4s ease;
 }
 
-.button-start:hover {
-  transform: translateY(-7px);
+.start-button:hover {
+  transform: translateY(-5px);
 }
